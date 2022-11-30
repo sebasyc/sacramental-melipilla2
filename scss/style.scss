@@ -1,0 +1,96 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+
+body {
+    font-size: 100%;
+    font-family: $montserrat;
+    color: black;
+    ::selection {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+.head-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../img/bg-portada.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: 768px) {
+        background-position: top;
+    }
+    &__content {
+        position: absolute;
+        bottom: 30%;
+        text-align: center;
+        @media (min-width: 768px) {
+            bottom: 20%;
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            display: block;
+            margin:  auto;
+            @media (min-width: 768px) {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        h1 {
+            margin: 1em 0 0;
+            font-size: 1.5em;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            @media (min-width: 768px) {
+                margin: .5em 0 0;
+                font-size: 3em;
+            }
+        }
+        h2 {
+            margin: .35em 0 0;
+            font-size: 1.25em;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 300;
+            @media (min-width: 768px) {
+                margin: .15em 0 0;
+                font-size: 2.25em;
+            }
+        }
+        .box-date {
+            display: inline-block;
+            margin: 1em 0 0;
+            padding: .5em 1.5em;
+            background-color: white;
+            border-radius: 50px;
+            @media (min-width: 768px) {
+                padding: .5em 2em;
+            }
+            h3 {
+                font-size: 1em;
+                color: $primary-color;
+                font-weight: 700;
+                @media (min-width: 768px) {
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        cursor: pointer;
+        @media (min-width: 768px) {
+            bottom: 8%;
+        }
+        img {
+            width: 60px;
+        }
+    }
+}
